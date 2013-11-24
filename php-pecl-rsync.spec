@@ -7,7 +7,7 @@
 Summary:	PHP extension for librsync
 Name:		%{php_name}-pecl-%{modname}
 Version:	0.1.0
-Release:	1
+Release:	2
 License:	Modified BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -18,6 +18,7 @@ BuildRequires:	%{php_name}-devel >= 4:5.2.6
 BuildRequires:	librsync-devel
 BuildRequires:	rpmbuild(macros) >= 1.666
 %{?requires_php_extension}
+Provides:	php(%{modname}) = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
